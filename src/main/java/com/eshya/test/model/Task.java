@@ -1,6 +1,8 @@
 package com.eshya.test.model;
 
 import com.eshya.test.utils.Constant;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Getter;
 import lombok.Setter;
 import org.hibernate.annotations.GenericGenerator;
@@ -23,6 +25,12 @@ public class Task {
     @Column(name = "id", updatable = false, nullable = false)
     private UUID id;
 
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "user_id", nullable = false)
+    @JsonIgnore
+    private UserPortal user;
+
     @Column(name = "name")
     private String name;
 
@@ -37,4 +45,6 @@ public class Task {
 
     @Column(name = "updated_at")
     private LocalDateTime updatedAt;
+
+
 }

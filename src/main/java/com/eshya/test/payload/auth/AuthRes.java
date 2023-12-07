@@ -1,4 +1,4 @@
-package com.eshya.test.payload;
+package com.eshya.test.payload.auth;
 
 import com.eshya.test.model.UserPortal;
 import lombok.Getter;

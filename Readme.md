@@ -76,4 +76,8 @@ mvn -B package --file pom.xml -Pdev
 java -jar target/api-0.0.1-SNAPSHOT.jar
 ```
 
+## Postman API TEST
+
+You can import collection from _postman_ folder. And after the program runs and the table is created by _hibernate_, run the _data.sql_ script in the DB
+
 @author : achmadayas@gmail.com

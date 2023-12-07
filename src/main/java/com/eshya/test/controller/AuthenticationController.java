@@ -2,10 +2,10 @@ package com.eshya.test.controller;
 
 import com.eshya.test.exception.ResourceNotFoundException;
 import com.eshya.test.model.UserPortal;
-import com.eshya.test.payload.AuthReq;
-import com.eshya.test.payload.AuthRes;
+import com.eshya.test.payload.auth.AuthReq;
+import com.eshya.test.payload.auth.AuthRes;
 import com.eshya.test.payload.DefaultMessage;
-import com.eshya.test.payload.ResetPasswdReq;
+import com.eshya.test.payload.auth.ResetPasswdReq;
 import com.eshya.test.service.UserDetailsImpl;
 import com.eshya.test.service.UserPortalService;
 import com.eshya.test.utils.*;
@@ -21,7 +21,6 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Date;
-import java.util.Map;
 
 
 @RestController

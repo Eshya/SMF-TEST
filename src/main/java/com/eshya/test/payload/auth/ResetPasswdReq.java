@@ -1,4 +1,4 @@
-package com.eshya.test.payload;
+package com.eshya.test.payload.auth;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Getter;

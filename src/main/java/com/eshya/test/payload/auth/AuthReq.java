@@ -1,4 +1,4 @@
-package com.eshya.test.payload;
+package com.eshya.test.payload.auth;
 
 import lombok.Getter;
 import lombok.Setter;

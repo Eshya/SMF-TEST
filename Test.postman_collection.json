@@ -1,0 +1,1052 @@
+{
+	"info": {
+		"_postman_id": "d448cb32-4ec6-4744-b9ce-b9f5643412e0",
+		"name": "Test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "27692273",
+		"_collection_link": "https://grey-comet-388491.postman.co/workspace/playground~0bc6e5ce-8e72-449f-89d3-f76c4edef766/collection/27692273-d448cb32-4ec6-4744-b9ce-b9f5643412e0?action=share&source=collection_link&creator=27692273"
+	},
+	"item": [
+		{
+			"name": "Task",
+			"item": [
+				{
+					"name": "create task",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyX3BvcnRhbF90b2tlbiIsImlhdCI6MTcwMTk2MzQ1MSwiZXhwIjoxNzAyMDQ5ODUxLCJ1c2VybmFtZSI6ImVzaHlhIn0.uPmUuDG1Qv1iEhtUVBJ7L_k1LIUx9ikyVFPL_ICKGy0qg4fqOxr7BPbpr8PyLH3fH80h_8gLj2rwTasoLdzMug",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"task - 1\",\r\n    \"description\": \"description aja\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8081/test_be/task"
+					},
+					"response": [
+						{
+							"name": "create task",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyX3BvcnRhbF90b2tlbiIsImlhdCI6MTcwMTk2MzQ1MSwiZXhwIjoxNzAyMDQ5ODUxLCJ1c2VybmFtZSI6ImVzaHlhIn0.uPmUuDG1Qv1iEhtUVBJ7L_k1LIUx9ikyVFPL_ICKGy0qg4fqOxr7BPbpr8PyLH3fH80h_8gLj2rwTasoLdzMug",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\":\"task - 2\",\r\n    \"description\": \"description aja\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "localhost:8081/test_be/task"
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 07 Dec 2023 16:09:34 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"1ee9a90c-de18-4964-9368-8a9a51ac8396\",\n    \"name\": \"task - 2\",\n    \"description\": \"description aja\",\n    \"createdAt\": \"2023-12-07T23:09:34.9909081\",\n    \"updatedAt\": null,\n    \"completed\": false\n}"
+						}
+					]
+				},
+				{
+					"name": "update task",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyX3BvcnRhbF90b2tlbiIsImlhdCI6MTcwMTk2MzQ1MSwiZXhwIjoxNzAyMDQ5ODUxLCJ1c2VybmFtZSI6ImVzaHlhIn0.uPmUuDG1Qv1iEhtUVBJ7L_k1LIUx9ikyVFPL_ICKGy0qg4fqOxr7BPbpr8PyLH3fH80h_8gLj2rwTasoLdzMug",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":null,\r\n    \"description\": null,\r\n    \"isCompleted\":true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8081/test_be/task/:uuid_task",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"test_be",
+								"task",
+								":uuid_task"
+							],
+							"variable": [
+								{
+									"key": "uuid_task",
+									"value": "84f0e577-b676-4feb-9cb2-c8432fa74e48"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "update status",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyX3BvcnRhbF90b2tlbiIsImlhdCI6MTcwMTk2MzQ1MSwiZXhwIjoxNzAyMDQ5ODUxLCJ1c2VybmFtZSI6ImVzaHlhIn0.uPmUuDG1Qv1iEhtUVBJ7L_k1LIUx9ikyVFPL_ICKGy0qg4fqOxr7BPbpr8PyLH3fH80h_8gLj2rwTasoLdzMug",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\":null,\r\n    \"description\": null,\r\n    \"is_completed\":false\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8081/test_be/task/:uuid_task",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"test_be",
+										"task",
+										":uuid_task"
+									],
+									"variable": [
+										{
+											"key": "uuid_task",
+											"value": "84f0e577-b676-4feb-9cb2-c8432fa74e48"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 07 Dec 2023 16:17:21 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"84f0e577-b676-4feb-9cb2-c8432fa74e48\",\n    \"name\": \"task - 1\",\n    \"description\": \"description aja\",\n    \"createdAt\": \"2023-12-07T23:04:21.629922\",\n    \"updatedAt\": \"2023-12-07T23:17:21.0232699\",\n    \"completed\": false\n}"
+						}
+					]
+				},
+				{
+					"name": "List Task",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyX3BvcnRhbF90b2tlbiIsImlhdCI6MTcwMTk2MzQ1MSwiZXhwIjoxNzAyMDQ5ODUxLCJ1c2VybmFtZSI6ImVzaHlhIn0.uPmUuDG1Qv1iEhtUVBJ7L_k1LIUx9ikyVFPL_ICKGy0qg4fqOxr7BPbpr8PyLH3fH80h_8gLj2rwTasoLdzMug",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:8081/test_be/task?page=0&size=5",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"test_be",
+								"task"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "0"
+								},
+								{
+									"key": "size",
+									"value": "5"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "create task Copy",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyX3BvcnRhbF90b2tlbiIsImlhdCI6MTcwMTk2MzQ1MSwiZXhwIjoxNzAyMDQ5ODUxLCJ1c2VybmFtZSI6ImVzaHlhIn0.uPmUuDG1Qv1iEhtUVBJ7L_k1LIUx9ikyVFPL_ICKGy0qg4fqOxr7BPbpr8PyLH3fH80h_8gLj2rwTasoLdzMug",
+										"type": "text"
+									}
+								],
+								"url": "localhost:8081/test_be/task"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 07 Dec 2023 16:10:01 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": \"84f0e577-b676-4feb-9cb2-c8432fa74e48\",\n        \"name\": \"task - 1\",\n        \"description\": \"description aja\",\n        \"createdAt\": \"2023-12-07T23:04:21.629922\",\n        \"updatedAt\": null,\n        \"completed\": false\n    },\n    {\n        \"id\": \"5dc50d16-e856-412a-88fe-ec8edbbece75\",\n        \"name\": \"task - 1\",\n        \"description\": \"description aja\",\n        \"createdAt\": \"2023-12-07T23:09:26.321807\",\n        \"updatedAt\": null,\n        \"completed\": false\n    },\n    {\n        \"id\": \"1ee9a90c-de18-4964-9368-8a9a51ac8396\",\n        \"name\": \"task - 2\",\n        \"description\": \"description aja\",\n        \"createdAt\": \"2023-12-07T23:09:34.990908\",\n        \"updatedAt\": null,\n        \"completed\": false\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Task By Id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyX3BvcnRhbF90b2tlbiIsImlhdCI6MTcwMTk2MzQ1MSwiZXhwIjoxNzAyMDQ5ODUxLCJ1c2VybmFtZSI6ImVzaHlhIn0.uPmUuDG1Qv1iEhtUVBJ7L_k1LIUx9ikyVFPL_ICKGy0qg4fqOxr7BPbpr8PyLH3fH80h_8gLj2rwTasoLdzMug",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:8081/test_be/task/:uuid_task",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"test_be",
+								"task",
+								":uuid_task"
+							],
+							"variable": [
+								{
+									"key": "uuid_task",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Task By Id",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyX3BvcnRhbF90b2tlbiIsImlhdCI6MTcwMTk2MzQ1MSwiZXhwIjoxNzAyMDQ5ODUxLCJ1c2VybmFtZSI6ImVzaHlhIn0.uPmUuDG1Qv1iEhtUVBJ7L_k1LIUx9ikyVFPL_ICKGy0qg4fqOxr7BPbpr8PyLH3fH80h_8gLj2rwTasoLdzMug",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "localhost:8081/test_be/task/:uuid_task",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"test_be",
+										"task",
+										":uuid_task"
+									],
+									"variable": [
+										{
+											"key": "uuid_task",
+											"value": "84f0e577-b676-4feb-9cb2-c8432fa74e48"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 07 Dec 2023 16:11:08 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"84f0e577-b676-4feb-9cb2-c8432fa74e48\",\n    \"name\": \"task - 1\",\n    \"description\": \"description aja\",\n    \"createdAt\": \"2023-12-07T23:04:21.629922\",\n    \"updatedAt\": null,\n    \"completed\": false\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete By Id",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyX3BvcnRhbF90b2tlbiIsImlhdCI6MTcwMTk2MzQ1MSwiZXhwIjoxNzAyMDQ5ODUxLCJ1c2VybmFtZSI6ImVzaHlhIn0.uPmUuDG1Qv1iEhtUVBJ7L_k1LIUx9ikyVFPL_ICKGy0qg4fqOxr7BPbpr8PyLH3fH80h_8gLj2rwTasoLdzMug",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:8081/test_be/task/:uuid_task",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"test_be",
+								"task",
+								":uuid_task"
+							],
+							"variable": [
+								{
+									"key": "uuid_task",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Task By Id",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyX3BvcnRhbF90b2tlbiIsImlhdCI6MTcwMTk2MzQ1MSwiZXhwIjoxNzAyMDQ5ODUxLCJ1c2VybmFtZSI6ImVzaHlhIn0.uPmUuDG1Qv1iEhtUVBJ7L_k1LIUx9ikyVFPL_ICKGy0qg4fqOxr7BPbpr8PyLH3fH80h_8gLj2rwTasoLdzMug",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "localhost:8081/test_be/task/:uuid_task",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"test_be",
+										"task",
+										":uuid_task"
+									],
+									"variable": [
+										{
+											"key": "uuid_task",
+											"value": "84f0e577-b676-4feb-9cb2-c8432fa74e48"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 07 Dec 2023 16:11:08 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"84f0e577-b676-4feb-9cb2-c8432fa74e48\",\n    \"name\": \"task - 1\",\n    \"description\": \"description aja\",\n    \"createdAt\": \"2023-12-07T23:04:21.629922\",\n    \"updatedAt\": null,\n    \"completed\": false\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Register User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"eshya\",\r\n    \"password\":\"\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:8081/test_be/register"
+			},
+			"response": [
+				{
+					"name": "success regist",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"eshya\",\r\n    \"password\":\"U2FsdGVkX1/zFFO8+XSJol1/cxUSqMMuadPTiKgzdSw=\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8081/test_be/register"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Method"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Headers"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 07 Dec 2023 14:33:31 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"userPortalId\": 1,\n    \"username\": \"eshya\",\n    \"password\": \"$2a$10$lXfqihNThTyTUZPDj9yn3e5jsOkIXeNuSDp5vIFvrT0pNNNfunUA2\",\n    \"role\": {\n        \"id\": 2,\n        \"name\": \"USER\"\n    },\n    \"registrationDate\": \"2023-12-07T14:33:30.833+00:00\",\n    \"modifiedDate\": \"2023-12-07T14:33:30.833+00:00\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Token",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"admin\",\r\n    \"password\":\"U2FsdGVkX18TLbRPumi5LluPHIM5orC2BBH0hewcDUo=\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:8081/test_be/auth/token"
+			},
+			"response": []
+		},
+		{
+			"name": "encrypt - ADMIN",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"data\":\"4dm1nP@ssw0rd\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:8081/test_be/utility/create-encryption"
+			},
+			"response": [
+				{
+					"name": "success",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"data\":\"P@ssw0rd4c@k\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8081/test_be/utility/create-encryption"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Method"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Headers"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 07 Dec 2023 14:32:56 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"decryption\": \"P@ssw0rd4c@k\",\n    \"encryption\": \"U2FsdGVkX1/zFFO8+XSJol1/cxUSqMMuadPTiKgzdSw=\"\n}"
+				},
+				{
+					"name": "unauthorized",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyX3BvcnRhbF90b2tlbiIsImlhdCI6MTcwMTk1OTkyMiwiZXhwIjoxNzAyMDQ2MzIyLCJ1c2VybmFtZSI6ImFkbWluIn0.5-GRvdqrgp8BK0i065XAAZ46_50sqsyt7jQVbKdQP3T4rvhH7NAWVuO0F8dS7jPKykLQCGUFEVTlaXsAbjKV5Q",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"data\":\"4dm1nP@ssw0rd\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8081/test_be/utility/create-encryption"
+					},
+					"status": "Unauthorized",
+					"code": 401,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Method"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Headers"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "150"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 07 Dec 2023 14:42:31 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"path\": \"/test_be/utility/create-encryption\",\n    \"error_Code\": \"UNAUTHORIZED\",\n    \"error\": \"Unauthorized\",\n    \"message\": \"Token is invalid or expired!\",\n    \"status\": 401\n}"
+				}
+			]
+		},
+		{
+			"name": "Reset Password - ADMIN",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyX3BvcnRhbF90b2tlbiIsImlhdCI6MTcwMTk1OTkyMiwiZXhwIjoxNzAyMDQ2MzIyLCJ1c2VybmFtZSI6ImFkbWluIn0.5-GRvdqrgp8BK0i065XAAZ46_50sqsyt7jQVbKdQP3T4rvhH7NAWVuO0F8dS7jPKykLQCGUFEVTlaXsAbjKV5Q",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"eshya\",\r\n    \"new_password\":\"U2FsdGVkX1/8z4kkPpq4Q1H5SMVOrz4OgDcVJWFzxd4=\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:8081/test_be/auth/reset-password"
+			},
+			"response": [
+				{
+					"name": "success",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyX3BvcnRhbF90b2tlbiIsImlhdCI6MTcwMTk1OTkyMiwiZXhwIjoxNzAyMDQ2MzIyLCJ1c2VybmFtZSI6ImFkbWluIn0.5-GRvdqrgp8BK0i065XAAZ46_50sqsyt7jQVbKdQP3T4rvhH7NAWVuO0F8dS7jPKykLQCGUFEVTlaXsAbjKV5Q",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"eshya\",\r\n    \"new_password\":\"U2FsdGVkX1/8z4kkPpq4Q1H5SMVOrz4OgDcVJWFzxd4=\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8081/test_be/auth/reset-password"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Method"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Headers"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 07 Dec 2023 15:17:48 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Password is reset successfully\"\n}"
+				}
+			]
+		}
+	]
+}
