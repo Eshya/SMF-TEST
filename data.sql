@@ -1,0 +1,6 @@
+
+INSERT INTO test_be.role VALUES (1, 'ROLE_ADMIN');
+INSERT INTO test_be.role VALUES (2, 'ROLE_USER');
+
+INSERT INTO test_be.user_portal VALUES (2, '2023-12-07 21:34:39.921', '2023-12-07 21:34:39.921', '$2a$10$uVwAlcJ2zbtLO4.KdHqtCe2k5kIB5WMoLbvCVN/KmuJeqeM9e9opy', 'ACTIVE', 'eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyX3BvcnRhbF90b2tlbiIsImlhdCI6MTcwMTk1OTkyMiwiZXhwIjoxNzAyMDQ2MzIyLCJ1c2VybmFtZSI6ImFkbWluIn0.5-GRvdqrgp8BK0i065XAAZ46_50sqsyt7jQVbKdQP3T4rvhH7NAWVuO0F8dS7jPKykLQCGUFEVTlaXsAbjKV5Q', 'admin', 1);
+INSERT INTO test_be.user_portal VALUES (1, '2023-12-07 21:33:30.833', '2023-12-07 22:17:48.023', '$2a$10$OSN/2.jENkg.pKnpFLorDu3AjX7Az2ghJRmPewgpGBYfHYgEx.qkO', 'ACTIVE', 'eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyX3BvcnRhbF90b2tlbiIsImlhdCI6MTcwMTk2MjM0NiwiZXhwIjoxNzAyMDQ4NzQ2LCJ1c2VybmFtZSI6ImVzaHlhIn0.7X4Jk3x8pWp3uGzV9a8-nTgtSfijyGmtyaj8uZPvoAqWGBx3Vb3BCkVUbyzXdjssLyeXXatJcG8U2eDrhopkVA', 'eshya', 2);
